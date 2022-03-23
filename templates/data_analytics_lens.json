@@ -9,7 +9,7 @@
             "questions":[
                 {
                     "id":"Q_1",
-                    "title":"How do you measure the health of your analytics workload?",
+                    "title":"1 - Monitor the health of the analytics pipelines",
                     "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-1.html",
                     "choices":[
                         {
@@ -69,6 +69,85 @@
                         {
                             "condition":"default",
                             "risk":"HIGH_RISK"
+                        }
+                    ]            
+                },
+                {
+                    "id":"Q_2",
+                    "title":"2 - Modernize deployment of the analytics jobs and applications",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-2.html",
+                    "choices":[
+                        {
+                            "id":"BP_2_1",
+                            "title":"Best Practice 2.1 - Use version control for job and application changes",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.1.1 - Implement infrastructure as code and application logic version control systems.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_2_2",
+                            "title":"Best Practice 2.2 - Set up testing data and a staging environment",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.2.1 - Use a curated dataset to test application logic and performance improvements, such that code changes can be comparatively analyzed for the desired outcomes; Suggestion 2.2.2 - Use a random sample of recent data to validate application edge cases and regressions have not been introduced; Suggestion 2.2.3 - Establish separate staging environments to fully test changes before going live.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_2_3",
+                            "title":"Best Practice 2.3 - Test and validate analytics jobs and application deployments",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.3.1 - Automate the deployment and testing of changes to infrastructure and applications.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_2_4",
+                            "title":"Best Practice 2.4 - Roll back failed deployments and backfill the data",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.4.1 - Use infrastructure as code and version control systems so that a failed deployment can be rolled back to a previous good state.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_2_5",
+                            "title":"Best Practice 2.5 - Build standard operating procedures for deployment, test, rollback, and backfill tasks",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.5.1 - Document and use standard operating procedures for implementing changes in your analytics workload.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-5.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_2_6",
+                            "title":"Best Practice 2.6 - Automate the standard operating procedures",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 2.6.1 - Use automation to perform changes to underlying analytics infrastructure or application logic.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-6.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"default",
+                            "risk":"NO_RISK"
                         }
                     ]            
                 }
