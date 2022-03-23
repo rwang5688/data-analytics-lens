@@ -14,7 +14,7 @@
                     "choices":[
                         {
                             "id":"BP_1_1",
-                            "title":"Best Practice 1.1 - Validate the data quality of source systems before moving to analytics",
+                            "title":"Best Practice 1.1 - Validate the data quality of source systems before moving to analytics (Required)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.1.1 - Implement data validation mechanisms; Suggestion 1.1.2 - Notify stakeholders and use business logic to determine how to remediate data that is not valid.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-1-1.html"
@@ -25,7 +25,7 @@
                         },
                         {
                             "id":"BP_1_2",
-                            "title":"Best Practice 1.2 - Monitor the planned arrival of recent data from the source systems",
+                            "title":"Best Practice 1.2 - Monitor the planned arrival of recent data from the source systems (Required)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.2.1 - Monitor for the arrival or availability of new data, and notify if the expected duration between data arrival is too long.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-1-2.html"
@@ -36,7 +36,7 @@
                         },
                         {
                             "id":"BP_1_3",
-                            "title":"Best Practice 1.3 - Define and measure the schedules of recurring analytics jobs",
+                            "title":"Best Practice 1.3 - Define and measure the schedules of recurring analytics jobs (Required)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.3.1 - Monitor the start time for recurring analytics processing jobs compared to the expected start time.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-1-3.html"
@@ -47,7 +47,7 @@
                         },
                         {
                             "id":"BP_1_4",
-                            "title":"Best Practice 1.4 - Define and measure the runtime durations of analytics jobs",
+                            "title":"Best Practice 1.4 - Define and measure the runtime durations of analytics jobs (Required)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.4.1 - Monitor the start and end times for analytics processing steps or the overall analytics job.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-1-4.html"
@@ -79,7 +79,7 @@
                     "choices":[
                         {
                             "id":"BP_2_1",
-                            "title":"Best Practice 2.1 - Use version control for job and application changes",
+                            "title":"Best Practice 2.1 - Use version control for job and application changes (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.1.1 - Implement infrastructure as code and application logic version control systems.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-1.html"
@@ -90,7 +90,7 @@
                         },
                         {
                             "id":"BP_2_2",
-                            "title":"Best Practice 2.2 - Set up testing data and a staging environment",
+                            "title":"Best Practice 2.2 - Set up testing data and a staging environment (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.2.1 - Use a curated dataset to test application logic and performance improvements, such that code changes can be comparatively analyzed for the desired outcomes; Suggestion 2.2.2 - Use a random sample of recent data to validate application edge cases and regressions have not been introduced; Suggestion 2.2.3 - Establish separate staging environments to fully test changes before going live.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-2.html"
@@ -101,7 +101,7 @@
                         },
                         {
                             "id":"BP_2_3",
-                            "title":"Best Practice 2.3 - Test and validate analytics jobs and application deployments",
+                            "title":"Best Practice 2.3 - Test and validate analytics jobs and application deployments (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.3.1 - Automate the deployment and testing of changes to infrastructure and applications.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-3.html"
@@ -112,7 +112,7 @@
                         },
                         {
                             "id":"BP_2_4",
-                            "title":"Best Practice 2.4 - Roll back failed deployments and backfill the data",
+                            "title":"Best Practice 2.4 - Roll back failed deployments and backfill the data (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.4.1 - Use infrastructure as code and version control systems so that a failed deployment can be rolled back to a previous good state.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-4.html"
@@ -123,7 +123,7 @@
                         },
                         {
                             "id":"BP_2_5",
-                            "title":"Best Practice 2.5 - Build standard operating procedures for deployment, test, rollback, and backfill tasks",
+                            "title":"Best Practice 2.5 - Build standard operating procedures for deployment, test, rollback, and backfill tasks (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.5.1 - Document and use standard operating procedures for implementing changes in your analytics workload.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-5.html"
@@ -134,10 +134,78 @@
                         },
                         {
                             "id":"BP_2_6",
-                            "title":"Best Practice 2.6 - Automate the standard operating procedures",
+                            "title":"Best Practice 2.6 - Automate the standard operating procedures (Recommended)",
                             "helpfulResource":{
                                 "displayText":"Suggestion 2.6.1 - Use automation to perform changes to underlying analytics infrastructure or application logic.",
                                 "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-2-6.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"default",
+                            "risk":"NO_RISK"
+                        }
+                    ]            
+                },
+                {
+                    "id":"Q_3",
+                    "title":"3 - Build financial accountability models for data and workload usage",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-3.html",
+                    "choices":[
+                        {
+                            "id":"BP_3_1",
+                            "title":"Best Practice 3.1 - Measure and notify of the data storage and processing costs per user of the workload (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 3.1.1 - Use tagging or other attribution methods to identify data storage ownership.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-3-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_3_2",
+                            "title":"Best Practice 3.2 - Allow downstream systems to use their own resources for analytics jobs (byo infrastructure) (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 3.2.1 - Perform regular reviews of analytics operations to determine if the business will benefit from teams managing their own infrastructure; Suggestion 3.2.2 - Use infrastructure as code and governance tools, such as AWS Service Catalog, to allow teams to self-provision infrastructure within approved constraints.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-3-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_3_3",
+                            "title":"Best Practice 3.3 - Build a common, shared processing system and measure the cost per analytics job (byo query) (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 3.3.1 - Perform regular reviews of analytics operations to determine if the business will benefit from shared, centralized analytics infrastructure; Suggestion 3.3.2 - Implement a per-request tracking mechanism which allows utilization attribution to the different teams.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-3-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_3_4",
+                            "title":"Best Practice 3.4 - Build an internal billback model for analytics workload usage (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 3.4.1 - Implement a cost-visibility and internal billback method to aggregate the team’s utilization of analytics resources.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-3-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
+                            }
+                        },
+                        {
+                            "id":"BP_3_5",
+                            "title":"Best Practice 3.5 - Restrict and record resource allocation permissions using AWS IAM (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 3.5.1 - Create a cost governance framework that uses specialized IAM roles, rather than individual IAM users, to provision costly infrastructure; Suggestion 3.5.2 - Use IAM logs to attribute users assuming these specialized IAM roles for cost attribution.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-3-5.html"
                             },
                             "improvementPlan":{
                                 "displayText":"You must have improvement plans per choice. It's optional whether or not to have a corresponding URL."
