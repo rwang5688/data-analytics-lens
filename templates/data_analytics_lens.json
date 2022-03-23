@@ -8,12 +8,12 @@
             "name":"Operational Excellence",
             "questions":[
                 {
-                    "id":"operational_excellence_q1",
+                    "id":"Q_1",
                     "title":"How do you measure the health of your analytics workload?",
                     "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-1.html",
                     "choices":[
                         {
-                            "id":"bp_1_1",
+                            "id":"BP_1_1",
                             "title":"Best Practice 1.1 - Validate the data quality of source systems before moving to analytics",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.1.1 - Implement data validation mechanisms; Suggestion 1.1.2 - Notify stakeholders and use business logic to determine how to remediate data that is not valid.",
@@ -24,7 +24,7 @@
                             }
                         },
                         {
-                            "id":"bp_1_2",
+                            "id":"BP_1_2",
                             "title":"Best Practice 1.2 - Monitor the planned arrival of recent data from the source systems",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.2.1 - Monitor for the arrival or availability of new data, and notify if the expected duration between data arrival is too long.",
@@ -35,7 +35,7 @@
                             }
                         },
                         {
-                            "id":"bp_1_3",
+                            "id":"BP_1_3",
                             "title":"Best Practice 1.3 - Define and measure the schedules of recurring analytics jobs",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.3.1 - Monitor the start time for recurring analytics processing jobs compared to the expected start time.",
@@ -46,7 +46,7 @@
                             }
                         },
                         {
-                            "id":"bp_1_4",
+                            "id":"BP_1_4",
                             "title":"Best Practice 1.4 - Define and measure the runtime durations of analytics jobs",
                             "helpfulResource":{
                                 "displayText":"Suggestion 1.4.1 - Monitor the start and end times for analytics processing steps or the overall analytics job.",
@@ -59,11 +59,11 @@
                     ],
                     "riskRules":[
                         {
-                            "condition":"bp_1_1 && bp_1_2 && bp_1_3 && bp_1_4",
+                            "condition":"BP_1_1 && BP_1_2 && BP_1_3 && BP_1_4",
                             "risk":"NO_RISK"
                         },
                         {
-                            "condition":"bp_1_1 || bp_1_2 || bp_1_3 || bp_1_4",
+                            "condition":"BP_1_1 || BP_1_2 || BP_1_3 || BP_1_4",
                             "risk":"MEDIUM_RISK"
                         },
                         {
