@@ -59,19 +59,18 @@
                     ],
                     "riskRules":[
                         {
-                            "condition":"choice1 && choice2 && choice3 && choice4",
+                            "condition":"bp_1_1 && bp_1_2 && bp_1_3 && bp_1_4",
                             "risk":"NO_RISK"
                         },
                         {
-                            "condition":"choice1 || choice2 || choice3 || choice4",
+                            "condition":"bp_1_1 || bp_1_2 || bp_1_3 || bp_1_4",
                             "risk":"MEDIUM_RISK"
                         },
                         {
                             "condition":"default",
                             "risk":"HIGH_RISK"
                         }
-                    ]
-            
+                    ]            
                 }
             ]
         }
