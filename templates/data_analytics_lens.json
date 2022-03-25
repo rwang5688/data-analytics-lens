@@ -176,8 +176,12 @@
                     ],
                     "riskRules":[
                         {
-                            "condition":"default",
+                            "condition":"BP_2_1 || BP_2_2 || BP_2_3 || BP_2_4 || BP_2_5 || BP_2_6",
                             "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"MEDIUM_RISK"
                         }
                     ]            
                 },
@@ -259,8 +263,12 @@
                     ],
                     "riskRules":[
                         {
-                            "condition":"default",
+                            "condition":"BP_3_1 || BP_3_2 || BP_3_3 || BP_3_4 || BP_3_5",
                             "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"MEDIUM_RISK"
                         }
                     ]            
                 }
