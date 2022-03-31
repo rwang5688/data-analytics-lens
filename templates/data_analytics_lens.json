@@ -549,7 +549,6 @@
                     "id":"Q_7",
                     "title":"Question 7 - Design resiliency for analytics workload",
                     "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-7.html",
-                    "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-7.html",    
                     "choices":[
                         {
                             "id":"BP_7_1",
@@ -640,8 +639,7 @@
                 {
                     "id":"Q_8",
                     "title":"Question 8 - Govern data and metadata changes",
-                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-8.html",
-                    "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-8.html",    
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-8.html",  
                     "choices":[
                         {
                             "id":"BP_8_1",
@@ -706,6 +704,184 @@
                     ]
                 }
             ]
-        }
+        },
+        {
+            "id":"performance_efficiency",
+            "name":"Performance Efficiency",
+            "questions":[
+                {
+                    "id":"Q_9",
+                    "title":"Question 9 - Choose the best-performing compute solution",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-9.html",    
+                    "choices":[
+                        {
+                            "id":"BP_9_1",
+                            "title":"BP 9.1 - Let business stakeholders confirm the business performance criteria of analytics processing (Highly Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 9.1.1 - Identify all stakeholders producing data for and consuming output from the analytics processing system.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 9.1.1 - Identify all stakeholders producing data for and consuming output from the analytics processing system.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_9_2",
+                            "title":"BP 9.2 - Choose analytics and ETL solutions that achieve the business purpose within operations constraints (Highly Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 9.2.1 - Identify the most constrained requirements based on the collected business metrics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 9.2.1 - Identify the most constrained requirements based on the collected business metrics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_9_3",
+                            "title":"BP 9.3 - Provision the compute resources to the location of the data storage (Highly Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 9.3.1 - Migrate or copy primary data stores from on-premises environments to AWS so that cloud compute and storage are closely located; Suggestion 9.3.2 - Place data processing resources in the same AWS Region as the primary data stores.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 9.3.1 - Migrate or copy primary data stores from on-premises environments to AWS so that cloud compute and storage are closely located; Suggestion 9.3.2 - Place data processing resources in the same AWS Region as the primary data stores.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-3.html"
+                            }
+                        },
+                        {
+                            "id":"BP_9_4",
+                            "title":"BP 9.4 - Define and measure the computing performance metrics (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 9.4.1 - Define performance efficiency metrics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 9.4.1 - Define performance efficiency metrics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-4.html"
+                            }
+                        },
+                        {
+                            "id":"BP_9_5",
+                            "title":"BP 9.5 - Periodically identify under-performing components and fine-tune the infrastructure or application logic (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 9.5.1 - Evaluate your metrics performance during regular operational reviews.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-5.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 9.5.1 - Evaluate your metrics performance during regular operational reviews.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-9-5.html"
+                            }
+                        },
+                        {
+                            "id":"BP_9_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_9_1 && BP_9_2 && BP_9_3",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"BP_9_1 || BP_9_2 || BP_9_3",
+                            "risk":"MEDIUM_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"HIGH_RISK"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"cost_optimization",
+            "name":"Cost Optimization",
+            "questions":[
+                {
+                    "id":"Q_12",
+                    "title":"Q 12 - Choose cost-effective compute and storage solutions based on workload usage patterns",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-12.html",
+                    "choices":[
+                        {
+                            "id":"BP_12_1",
+                            "title":"BP 12.1 - Decouple storage from compute (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 12.1.1 - Compress data when applicable; Suggestion 12.1.2 - Consider data temperature when choosing data store and storage class; Suggestion 12.1.3 - Use low-cost compute resources, such as Spot Instances, when applicable; Suggestion 12.1.4 - Deploy compute close to data to reduce data transfer cost; Suggestion 12.1.5 - Use Amazon S3 Select and Amazon S3 Glacier Select to reduce data retrieval.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 12.1.1 - Compress data when applicable; Suggestion 12.1.2 - Consider data temperature when choosing data store and storage class; Suggestion 12.1.3 - Use low-cost compute resources, such as Spot Instances, when applicable; Suggestion 12.1.4 - Deploy compute close to data to reduce data transfer cost; Suggestion 12.1.5 - Use Amazon S3 Select and Amazon S3 Glacier Select to reduce data retrieval.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_12_2",
+                            "title":"BP 12.2 - Plan and provision capacity for predictable workload usage (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 12.2.1 - Choose the right instance type based on workload pattern and growth ratio; Suggestion 12.2.2 - Choose the right sizing based on average or medium workload usage; Suggestion 12.2.3 - Use automatic scaling capability to meet the peak demand instead of over provisioning.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 12.2.1 - Choose the right instance type based on workload pattern and growth ratio; Suggestion 12.2.2 - Choose the right sizing based on average or medium workload usage; Suggestion 12.2.3 - Use automatic scaling capability to meet the peak demand instead of over provisioning.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_12_3",
+                            "title":"BP 12.3 - Use On-Demand Instance capacity for unpredictable workload usage (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 12.3.1 - Use Amazon Athena for ad hoc SQL workloads; Suggestion 12.3.2 - Use AWS Glue instead of Amazon EMR for infrequent ETL jobs; Suggestion 12.3.3 - Use on-demand resources for transient workloads or short-term development and testing need.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 12.3.1 - Use Amazon Athena for ad hoc SQL workloads; Suggestion 12.3.2 - Use AWS Glue instead of Amazon EMR for infrequent ETL jobs; Suggestion 12.3.3 - Use on-demand resources for transient workloads or short-term development and testing need.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-3.html"
+                            }
+                        },
+                        {
+                            "id":"BP_12_4",
+                            "title":"BP 12.4 - Avoid data duplication (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 12.4.1 - Implement a central storage layer to share data among tenants.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 12.4.1 - Implement a central storage layer to share data among tenants.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-12-4.html"
+                            }
+                        },
+                        {
+                            "id":"BP_12_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_12_1 || BP_12_2 || BP_12_3 || BP_12_4",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"MEDIUM_RISK"
+                        }
+                    ]            
+                }
+            ]
+        }        
     ]
 }
