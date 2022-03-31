@@ -866,7 +866,86 @@
                             "risk":"HIGH_RISK"
                         }
                     ]
-                }
+                },
+                {
+                    "id":"Q_11",
+                    "title":"Question 11 - Choose the best-performing file format and partitioning",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-11.html",    
+                    "choices":[
+                        {
+                            "id":"BP_11_1",
+                            "title":"BP 11.1 - Select format based on data write frequency and patterns (append-only vs. in-place update) (Highly Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 11.1.1 - Understand your analytics workload data write characteristics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 11.1.1 - Understand your analytics workload data write characteristics.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_11_2",
+                            "title":"BP 11.2 - Select format based on data read frequency and patterns (Highly Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 11.2.1 - Understand your analytics workload data read characteristics and patterns; Suggestion 11.2.2 - Be aware of API-driven data access pattern constraints, such as the amount of data retrieved per API request, which could impact overall performance due to API throttling; Suggestion 11.2.3 - Use caching services to improve performance and reduce reads from the storage tier.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 11.2.1 - Understand your analytics workload data read characteristics and patterns; Suggestion 11.2.2 - Be aware of API-driven data access pattern constraints, such as the amount of data retrieved per API request, which could impact overall performance due to API throttling; Suggestion 11.2.3 - Use caching services to improve performance and reduce reads from the storage tier.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_11_3",
+                            "title":"BP 11.3 - Use file compression to reduce number of files and to improve file I/O efficiency (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 11.3.1 - Understand the I/O constraints on the workload; Suggestion 11.3.2 - Compress data to reduce the transfer time; Suggestion 11.3.3 - Evaluate the available compression options for each resource of the workload.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 11.3.1 - Understand the I/O constraints on the workload; Suggestion 11.3.2 - Compress data to reduce the transfer time; Suggestion 11.3.3 - Evaluate the available compression options for each resource of the workload.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-3.html"
+                            }
+                        },
+                        {
+                            "id":"BP_11_4",
+                            "title":"BP 11.4 - Partition the data to avoid unnecessary file reads (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 11.4.1 - Store data partitioned based on column with incremental processing constraints; Suggestion 11.4.2 - Store data partitioned based on reducing number of files or compaction; Suggestion 11.4.3 - Store data partitioned based on columns frequently used in queries for filtering; Suggestion 11.4.4 - Store data partitioned based on time attributes with earlier data in infrequent-access tiers.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 11.4.1 - Store data partitioned based on column with incremental processing constraints; Suggestion 11.4.2 - Store data partitioned based on reducing number of files or compaction; Suggestion 11.4.3 - Store data partitioned based on columns frequently used in queries for filtering; Suggestion 11.4.4 - Store data partitioned based on time attributes with earlier data in infrequent-access tiers.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-11-4.html"
+                            }
+                        },
+                        {
+                            "id":"BP_11_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_11_1 && BP_11_2",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"BP_11_1 || BP_11_2",
+                            "risk":"MEDIUM_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"HIGH_RISK"
+                        }
+                    ]
+                }                
             ]
         },
         {
