@@ -636,6 +636,74 @@
                             "risk":"HIGH_RISK"
                         }
                     ]
+                },
+                {
+                    "id":"Q_8",
+                    "title":"Question 8 - Govern data and metadata changes",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-8.html",
+                    "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-8.html",    
+                    "choices":[
+                        {
+                            "id":"BP_8_1",
+                            "title":"BP 8.1 - Build a central Data Catalog to store, share, and track metadata changes (Required)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 8.1.1 - Changes on the metadata in the Data Catalog should be controlled and versioned.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 8.1.1 - Changes on the metadata in the Data Catalog should be controlled and versioned.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_8_2",
+                            "title":"BP 8.2 - Monitor for data quality anomalies (Required)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 8.2.1 - Include a data quality check stage in the ETL pipeline as early as possible; Suggestion 8.2.2 - Understand the nature of your data and determine the types of data anomalies need to be monitored and fixed based on the business requirements; Suggestion 8.2.3 - Select an existing data quality solution or develop your own based on the requirements.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 8.2.1 - Include a data quality check stage in the ETL pipeline as early as possible; Suggestion 8.2.2 - Understand the nature of your data and determine the types of data anomalies need to be monitored and fixed based on the business requirements; Suggestion 8.2.3 - Select an existing data quality solution or develop your own based on the requirements.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_8_3",
+                            "title":"BP 8.3 - Trace the data lineage (Required)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 8.3.1 - Track and control data lineage information; Suggestion 8.3.2 - Implement steps in the ETL pipeline to check and validate record counts for each data movement and transformation; Suggestion 8.3.3 - Use visualization tools to investigate data lineage; Suggestion 8.3.4 - Build a data lineage report to satisfy compliance and audit requirements.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 8.3.1 - Track and control data lineage information; Suggestion 8.3.2 - Implement steps in the ETL pipeline to check and validate record counts for each data movement and transformation; Suggestion 8.3.3 - Use visualization tools to investigate data lineage; Suggestion 8.3.4 - Build a data lineage report to satisfy compliance and audit requirements.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-8-3.html"
+                            }
+                        },
+                        {
+                            "id":"BP_8_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_8_1 && BP_8_2 && BP_8_3",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"BP_8_1 || BP_8_2 || BP_8_3",
+                            "risk":"MEDIUM_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"HIGH_RISK"
+                        }
+                    ]
                 }
             ]
         }
