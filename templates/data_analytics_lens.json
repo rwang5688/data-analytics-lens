@@ -84,7 +84,7 @@
                             "condition":"default",
                             "risk":"HIGH_RISK"
                         }
-                    ]            
+                    ]
                 },
                 {
                     "id":"Q_2",
@@ -183,7 +183,7 @@
                             "condition":"default",
                             "risk":"MEDIUM_RISK"
                         }
-                    ]            
+                    ]
                 },
                 {
                     "id":"Q_3",
@@ -270,7 +270,7 @@
                             "condition":"default",
                             "risk":"MEDIUM_RISK"
                         }
-                    ]            
+                    ]
                 }
             ]
         },
@@ -379,7 +379,7 @@
                             "condition":"default",
                             "risk":"HIGH_RISK"
                         }
-                    ]            
+                    ]
                 },
                 {
                     "id":"Q_5",
@@ -458,7 +458,7 @@
                             "condition":"default",
                             "risk":"HIGH_RISK"
                         }
-                    ]         
+                    ]
                 },
                 {
                     "id":"Q_6",
@@ -537,7 +537,7 @@
                             "condition":"default",
                             "risk":"HIGH_RISK"
                         }
-                    ]             
+                    ]
                 }
             ]
         },
@@ -1025,7 +1025,133 @@
                             "condition":"default",
                             "risk":"MEDIUM_RISK"
                         }
-                    ]            
+                    ]
+                },
+                {
+                    "id":"Q_13",
+                    "title":"Q 13 - Manage cost over time",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-13.html",
+                    "choices":[
+                        {
+                            "id":"BP_13_1",
+                            "title":"BP 13.1 - Delete unused data, infrastructure, or jobs (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 13.1.1 - Track data freshness; Suggestion 13.1.2 - Delete data that is out of its retention period; Suggestion 13.1.3 - Delete intermediate-processed data that can be removed without business impacts; Suggestion 13.1.4 - Delete unused analytics jobs that consume infrastructure resources but no one uses the job results.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 13.1.1 - Track data freshness; Suggestion 13.1.2 - Delete data that is out of its retention period; Suggestion 13.1.3 - Delete intermediate-processed data that can be removed without business impacts; Suggestion 13.1.4 - Delete unused analytics jobs that consume infrastructure resources but no one uses the job results.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_13_2",
+                            "title":"BP 13.2 - Reduce the use of over-provisioned infrastructure (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 13.2.1 - Evaluate if compute resources can be downsized; Suggestion 13.2.2 - Move infrequently used data out of a data warehouse into a data lake; Suggestion 13.2.3 - Merge low utilization infrastructure resources; Suggestion 13.2.4 - Move infrequently accessed data into low-cost storage tiers.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 13.2.1 - Evaluate if compute resources can be downsized; Suggestion 13.2.2 - Move infrequently used data out of a data warehouse into a data lake; Suggestion 13.2.3 - Merge low utilization infrastructure resources; Suggestion 13.2.4 - Move infrequently accessed data into low-cost storage tiers.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_13_3",
+                            "title":"BP 13.3 - Reduce repeating analytics jobs with no business value (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 13.3.1 - Use the lowest acceptable frequency for data processing.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-3.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 13.3.1 - Use the lowest acceptable frequency for data processing.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-3.html"
+                            }
+                        },
+                        {
+                            "id":"BP_13_4",
+                            "title":"BP 13.4 - Evaluate and adopt new cost-effective solutions (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 13.4.1 - Set service quotas to control resource usage; Suggestion 13.4.2 - Pause and resume resources if the workload is not always required; Suggestion 13.4.3 - Switch to a new service that is cheaper, for example, using Aurora Serverless instead of Amazon RDS.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-4.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 13.4.1 - Set service quotas to control resource usage; Suggestion 13.4.2 - Pause and resume resources if the workload is not always required; Suggestion 13.4.3 - Switch to a new service that is cheaper, for example, using Aurora Serverless instead of Amazon RDS.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-13-4.html"
+                            }
+                        },
+                        {
+                            "id":"BP_13_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_13_1 || BP_13_2 || BP_13_3 || BP_13_4",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"MEDIUM_RISK"
+                        }
+                    ]
+                },
+                {
+                    "id":"Q_14",
+                    "title":"Q 14 - Use optimal pricing models based on infrastructure usage patterns",
+                    "description":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/design-principle-14.html",
+                    "choices":[
+                        {
+                            "id":"BP_14_1",
+                            "title":"BP 14.1 - Evaluate the infrastructure usage patterns then choose payment options accordingly (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 14.1.1 - Evaluate available payment options of the infrastructure resources of your choice; Suggestion 14.1.2 - For steady, permanent workloads, obtain Reserved Instances or Savings Plans price discounts instead of paying on-demand pricing; Suggestion 14.1.3 - Use on-demand resources during development and in pre-production environments.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-14-1.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 14.1.1 - Evaluate available payment options of the infrastructure resources of your choice; Suggestion 14.1.2 - For steady, permanent workloads, obtain Reserved Instances or Savings Plans price discounts instead of paying on-demand pricing; Suggestion 14.1.3 - Use on-demand resources during development and in pre-production environments.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-14-1.html"
+                            }
+                        },
+                        {
+                            "id":"BP_14_2",
+                            "title":"BP 14.2 - Consult with your finance team and determine optimal payment models (Recommended)",
+                            "helpfulResource":{
+                                "displayText":"Suggestion 14.2.1 - Consolidate the infrastructure usage to maximize the coverage of reserved capacity price options.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-14-2.html"
+                            },
+                            "improvementPlan":{
+                                "displayText":"Suggestion 14.2.1 - Consolidate the infrastructure usage to maximize the coverage of reserved capacity price options.",
+                                "url":"https://docs.aws.amazon.com/wellarchitected/latest/analytics-lens/best-practice-14-2.html"
+                            }
+                        },
+                        {
+                            "id":"BP_14_99",
+                            "title":"None of these",
+                            "helpfulResource":{
+                                "displayText":"None of these"
+                            },
+                            "improvementPlan":{
+                                "displayText":"None of these"
+                            }
+                        }
+                    ],
+                    "riskRules":[
+                        {
+                            "condition":"BP_14_1 || BP_14_2",
+                            "risk":"NO_RISK"
+                        },
+                        {
+                            "condition":"default",
+                            "risk":"MEDIUM_RISK"
+                        }
+                    ]
                 }
             ]
         }        
